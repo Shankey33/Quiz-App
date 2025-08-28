@@ -47,6 +47,8 @@ const Question = ({questions, finished, setFinished, setScore, start}) => {
         setDisabled(true);
     }
 
+    const shuffledOptions = allOptions.sort(() => Math.random() - 0.5);
+
     return (
         <>
         {finished ? (<p className="finished-message">Quiz Completed!</p>) : <div className='question-body'>
